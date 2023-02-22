@@ -6,3 +6,5 @@ declare namespace Express {
       token: string | object;
   }
 }
+
+// TODO: Need to add more NEAR related types
