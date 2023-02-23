@@ -1,4 +1,5 @@
 import {
+  Connection,
   connect,
   Contract,
   keyStores,
@@ -24,7 +25,7 @@ const { CONTRACT_OWNER_PRIVATE_KEY, CONTRACT_NAME, CONTRACT_OWNER, NODE_ENV } =
 
 export class NEAR {
   public accountId: AccountId | null = null;
-  public account: Account | any;
+  public account: Account | any = new Account({} as Connection, CONTRACT_OWNER as string);
   public connection: any;
   public attachedDeposit: BN | any;
   public gas: BN | any;
